@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
+}
+
+.container h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -200px; /* sembunyi */
+    width: 200px;
+    height: 100vh;
+    background-color: #1a2b44;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    overflow: auto;
+    z-index: 999;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.main {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+.main.shift {
+    margin-left: 200px; /* geser sesuai sidebar */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card .count {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.card .link {
+    margin-top: 10px;
+    display: inline-block;
+    color: white;
+    text-decoration: underline;
+}
+
+
+.bg-green { background-color: #28a745; }
+.bg-red { background-color: #dc3545; }
+.bg-yellow { background-color: #ffc107; color: black; }
+.bg-purple { background-color: #6f42c1; }
+.bg-teal { background-color: #17a2b8; }
+.bg-orange { background-color: #fd7e14; }
+.bg-pink { background-color: #e83e8c; }
+.bg-blue { background-color: #007bff; }

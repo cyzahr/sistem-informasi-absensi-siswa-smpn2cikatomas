@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: -200px; /* sembunyi */
+    width: 200px;
+    height: 100vh;
+    background-color: #1a2b44;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    overflow: auto;
+    z-index: 999;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.shift {
+    margin-left: 200px; /* geser sesuai sidebar */
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+.btn.tambah { background-color: #007bff; }
+.btn.hijau { background-color: #28a745; }
+.btn.biru { background-color: #17a2b8; }
+  
+.status.active {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+  
+.status.non-active {
+    background-color: #dc3545;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+  
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+  
+th {
+    background-color: #1b2a49;
+    color: white;
+  }

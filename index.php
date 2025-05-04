@@ -24,15 +24,15 @@ if (!isset($_SESSION['user'])) {
 
         <div class="sidebar" id="sidebar">
             <ul>
-                <li>Dashboard</li>
+                <li><Dashboard href="index.php">Dashboard</a></li>
                 <li>Admin</li>
-                <li>Administrasi</li>
-                <li>Guru</li>
-                <li>Siswa</li>
-                <li>Wali Kelas</li>
-                <li>Pelajaran</li>
-                <li>Absen Siswa</li>
-                <li>Laporan Absen Siswa</li>
+                <li><a href="dataguru.php">Guru</a></li>
+                <li><Siswa href="datasiswa.php">Siswa</a></li>
+                <li><Kelas href="datakelas.php">Kelas</a></li>
+                <li><a href="datawalikelas.php">Wali Kelas</a></li>
+                <li><Pelajaran href="datamatpel.php">Pelajaran</a></li>
+                <li><Absen href="absensi.php">Absen Siswa</a></li>
+                <li><Laporan href="laporanabsensi.php">Laporan Absen Siswa</a></li>
             </ul>
         </div>
 
@@ -42,46 +42,30 @@ if (!isset($_SESSION['user'])) {
                 <?php include 'data.php'; ?>
                 <div class="card bg-green">
                     <div class="count">50</div>
-                    <div class="label">Data Siswa</div>
+                    <div class="label">Total Siswa</div>
                     <a href="datasiswa.php" class="detail-link">Lihat Detail →</a>
                 </div>
                 <div class="card bg-red">
                     <div class="count">54</div>
-                    <div class="label">Data Guru</div>
+                    <div class="label">Total Guru</div>
                     <a href="dataguru.php" class="detail-link">Lihat Detail →</a>
                 </div>
                 <div class="card bg-yellow">
                     <div class="count">1</div>
-                    <div class="label">Data Admin</div>
+                    <div class="label">Total Wali Kelas</div>
                     <a href="dataadmin.php" class="detail-link">Lihat Detail →</a>
                 </div>
                 <div class="card bg-purple">
                     <div class="count">3</div>
-                    <div class="label">Data Kelas</div>
+                    <div class="label">Total Kelas</div>
                     <a href="datakelas.php" class="detail-link">Lihat Detail →</a>
                 </div>
                 <div class="card bg-teal">
                     <div class="count">5</div>
-                    <div class="label">Data Mata Pelajaran</div>
-                    <a href="datamatpel.php" class="detail-link">Lihat Detail →</a>
-                </div>
-                <div class="card bg-orange">
-                    <div class="count">2</div>
-                    <div class="label">Data Pembelajaran</div>
-                    <a href="datapembelajaran.php" class="detail-link">Lihat Detail →</a>
-                </div>
-                <div class="card bg-pink">
-                    <div class="count">1</div>
-                    <div class="label">Absensi</div>
-                    <a href="absensi.php" class="detail-link">Lihat Detail →</a>
-                </div>
-                <div class="card bg-blue">
-                    <div class="count">0</div>
-                    <div class="label">Notifikasi</div>
-                    <a href="notifikasi.php" class="detail-link">Lihat Detail →</a>
+                    <div class="label">Total Mata Pelajaran</div>
+                    <a href="datamatpel.php" class="detail-link">Lihat Detail →</a>                
                 </div>
             </div>
-        </div>
     </section>
 
     <script src="script.js"></script>

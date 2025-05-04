@@ -18,23 +18,20 @@
         <div class="sidebar" id="sidebar">
             <ul>
                 <li>Dashboard</li>
-                <li>Biodata</li>
+                <li>Admin</li>
                 <li>Administrasi</li>
-                <li>Absensi</li>
-                <li>Notification</li>
-                <li>Profil</li>
-                <li>Logout</li>
+                <li>Guru</li>
+                <li>Siswa</li>
+                <li>Wali kelas</li>
+                <li>Pelajaran</li>
+                <li>Absen Siswa</li>
+                <li>Laporan Absen Siswa</li>
             </ul>
         </div>
 
         <div class="main-content" id="mainContent">
             <h1>Data Siswa</h1>
             <a href="tambahsiswa.php" class="btn tambah">+ Tambah</a>
-            <a href="export.php" class="btn hijau">Export To Excel</a>
-            <form action="import.php" method="post" enctype="multipart/form-data" style="display:inline;">
-                <input type="file" name="file">
-                <button class="btn biru" type="submit">Import</button>
-            </form>
             <input type="text" id="search" placeholder="Search..." onkeyup="searchTable()">
             <table id="siswaTable">
                 <thead>
@@ -45,7 +42,8 @@
                         <th>NIS</th>
                         <th>JENIS KELAMIN</th>
                         <th>PHONE</th>
-                        <th>STATUS</th>
+                        <th>WALI KELAS</th>
+                        <th>WALI SISWA</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
@@ -62,6 +60,8 @@
                         <td><?= $row['nis'] ?></td>
                         <td><?= $row['jenis_kelamin'] ?></td>
                         <td><?= $row['phone'] ?></td>
+                        <td><?= $row['wali_kelas'] ?></td>
+                        <td><?= $row['wali_siswa'] ?></td>
                         <td><span class="status <?= strtolower($row['status']) ?>"><?= $row['status'] ?></span></td>
                         <td>
                             <a href="edit.php?id=<?= $row['id'] ?>">✏️</a>

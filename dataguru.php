@@ -16,14 +16,46 @@
 
         <div class="sidebar" id="sidebar">
             <ul>
-                <li>Dashboard</li>
-                <li>Biodata</li>
+            <li>Dashboard</li>
+                <li>Admin</li>
                 <li>Administrasi</li>
-                <li>Absensi</li>
-                <li>Notification</li>
-                <li>Profil</li>
-                <li>Logout</li>
+                <li>Guru</li>
+                <li>Siswa</li>
+                <li>Wali Kelas</li>
+                <li>Pelajaran</li>
+                <li>Absen Siswa</li>
+                <li>Laporan Absen Siswa</li>
             </ul>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <h1>Data Guru</h1>
+            <a href="tambahguru.php" class="btn tambah">+ Tambah</a>
+            <input type="text" id="search" placeholder="Search..." onkeyup="searchTable()">
+            <table id="guruTable">
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NIP</th>
+                        <th>NAMA</th>
+                        <th>JENIS KELAMIN</th>
+                        <th>ALAMAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $no = 1;
+                    $sql = mysqli_query($conn, "SELECT * FROM guru");
+                    while ($row = mysqli_fetch_assoc($sql)){
+                    ?>
+                    <tr>
+                        <td><? = $no++ ?></td>
+                        <td> </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+
         </div>
 </section>
 <script src="script.js"></script>

@@ -16,13 +16,15 @@
             </div>
             <div class="sidebar" id="sidebar">
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Biodata</li>
-                    <li>Administrasi</li>
-                    <li>Absensi</li>
-                    <li>Notification</li>
-                    <li>Profil</li>
-                    <li>Logout</li>
+                <li>Dashboard</li>
+                <li>Admin</li>
+                <li>Administrasi</li>
+                <li>Guru</li>
+                <li>Siswa</li>
+                <li>Wali kelas</li>
+                <li>Pelajaran</li>
+                <li>Absen Siswa</li>
+                <li>Laporan Absen Siswa</li>
                 </ul>
             </div>
             <div class="main-content">
